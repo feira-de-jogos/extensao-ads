@@ -25,7 +25,7 @@ Descrição sobre as referências que influenciaram no design do jogo.
 
 1. Clone o repositório
 ```
-git clone https://github.com/ederson-torresini/adcieqipt20241-Thuthu-e-Aninha-jogo.git
+git clone https://github.com/link/para/o/repositório
 ``` 
 2. Instalação
 
