@@ -1,22 +1,15 @@
-var config = {
-  type: Phaser.AUTO,
-  width: 800,
-  height: 600,
-  physics: {
-      default: "arcade",
-      arcade: {
-          gravity: { y: 300 },
-          debug: false,
-      },
-  },
-  scene: {
-      preload: preload,
-      create: create,
-      update: update,
-  },
-};
+config.scene = {
+  preload: preload,
+  create: create,
+  update: update,
+}
 
-var game = new Phaser.Game(config);
+let game = new Phaser.Game(config);
+
+let platforms;
+let score = 0;
+let scoreText;
+let player;
 
 function preload() {
   this.load.image("sky", "assets/images/sky.png");
@@ -28,11 +21,6 @@ function preload() {
       frameHeight: 48,
   });
 }
-
-var platforms;
-var score = 0;
-var scoreText;
-let player;
 
 function create() {
   this.add.image(400, 300, "sky");
@@ -99,12 +87,12 @@ function create() {
               child.enableBody(true, child.x, 0, true, true);
           });
 
-          var x =
+          let x =
               player.x < 400
                   ? Phaser.Math.Between(400, 800)
                   : Phaser.Math.Between(0, 400);
 
-          var bomb = bombs.create(x, 16, "bomb");
+          let bomb = bombs.create(x, 16, "bomb");
           bomb.setBounce(1);
           bomb.setCollideWorldBounds(true);
           bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
@@ -134,7 +122,7 @@ function create() {
 }
 
 function update() {
-  var cursors = this.input.keyboard.createCursorKeys();
+  let cursors = this.input.keyboard.createCursorKeys();
 
   if (cursors.left.isDown) {
       player.setVelocityX(-160);
