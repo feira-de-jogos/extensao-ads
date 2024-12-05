@@ -8,7 +8,7 @@ Essa pasta destina-se a cenas javascript. É recomendado que adicione pelo menos
 4. finalTriste.js
 5. finalFeliz.js
 
-Importe todas as cenas no index.js.
+Importe todas as cenas no index.js e no index.html como sugerido no próprio código.
 
 ## PASTA CONFIG
 
