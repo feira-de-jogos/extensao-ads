@@ -1,5 +1,4 @@
-// Arquivo de condiguração do Phaser
-let config = {
+export default {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
@@ -8,6 +7,6 @@ let config = {
         arcade: {
             gravity: { y: 300 },
             debug: false,
-        },
+        }
     }
 }
