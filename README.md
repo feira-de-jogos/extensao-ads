@@ -1,4 +1,5 @@
 # PROJETO FEIRA DE JOGOS
+
 ## 🎮 Título do Jogo
 
 Breve descrição sobre o jogo.
@@ -6,12 +7,15 @@ Breve descrição sobre o jogo.
 ## 👾 Personagens
 
 ### Personagem 1:
-- Descrição: 
+
+- Descrição:
 
 ### Personagem 2:
-- Descrição: 
+
+- Descrição:
 
 (...)
+
 ## 💡 Ideia do jogo
 
 Breve descrição da ideia do jogo
@@ -20,19 +24,22 @@ Breve descrição da ideia do jogo
 
 Descrição sobre as referências que influenciaram no design do jogo.
 
-
 ### 🚀 Executando Localmente
 
 1. Clone o repositório
+
 ```
 git clone https://github.com/link/para/o/repositório
-``` 
+```
+
 2. Instalação
 
 ```
 npm install
 ```
+
 2. Executando
+
 ```
 npm start
 ```
