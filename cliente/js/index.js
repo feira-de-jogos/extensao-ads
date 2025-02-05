@@ -1,8 +1,8 @@
 class Game extends Phaser.Game {
-  constructor () {
-    super(config)
+  constructor() {
+    super(config);
 
-    this.audio = document.querySelector('audio')
+    this.audio = document.querySelector("audio");
 
     // let iceServers
     // if (window.location.host === 'feira-de-jogos.dev.br') {
@@ -15,27 +15,25 @@ class Game extends Phaser.Game {
     //     }
     //   ]
     // } else {
-      this.socket = io()
-      iceServers = [
-        {
-          urls: 'stun:stun.l.google.com:19302'
-        }
-      ]
+    this.socket = io();
+    iceServers = [
+      {
+        urls: "stun:stun.l.google.com:19302",
+      },
+    ];
     // }
-    this.iceServers = { iceServers }
+    this.iceServers = { iceServers };
 
-    this.socket.on('connect', () => {
-      console.log('Conectado ao servidor!')
-    })
+    this.socket.on("connect", () => {
+      console.log("Conectado ao servidor!");
+    });
 
     // Inclua novas cenas aqui
-    this.scene.add('cenaDeAmostra', cenaDeAmostra)
-    this.scene.add('cenaAbertura', abertura)
-
+    this.scene.add("cenaDeAmostra", cenaDeAmostra);
+    this.scene.add("cenaAbertura", abertura);
   }
 }
 
 window.onload = () => {
-  window.game = new Game()
-}
-
+  window.game = new Game();
+};

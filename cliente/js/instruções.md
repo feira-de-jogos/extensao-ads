@@ -14,11 +14,11 @@ Importe todas as cenas no index.js e no index.html como sugerido no próprio có
 
 1. Crie um arquivo com o nome de `.env`
 2. Copie e cole o código a seguir com seu username e credencial de acesso
+
 ```
 USENARME=<username>
 CREDENTIAL=<credencial>
 ```
-
 
 ## MAIS INFORMAÇÕES
 
