@@ -13,35 +13,35 @@ class Game extends Phaser.Game {
     this.audio = document.querySelector("audio");
 
     let iceServers;
-    // if (window.location.host === 'feira-de-jogos.dev.br') {
-    //   this.socket = io({ path: '/adcieqipt20241/socket.io/' })
-    //   iceServers = [
-    //     {
-    //       urls: 'turn:feira-de-jogos.dev.br',
-    //       username: 'adcieqipt20241',
-    //       credential: 'adcieqipt20241'
-    //     }
-    //   ]
-    // } else {
-    this.socket = io();
-    iceServers = [
-      {
-        urls: "stun:stun.l.google.com:19302",
-      },
-    ];
-    // }
-    this.iceServers = { iceServers };
+    if (window.location.host === 'feira-de-jogos.dev.br') {
+      this.socket = io({ path: '/adcieqipt20241/socket.io/' })
+      iceServers = [
+        {
+          urls: 'turn:feira-de-jogos.dev.br',
+          username: 'adcieqipt20241',
+          credential: 'adcieqipt20241'
+        }
+      ]
+    } else {
+      this.socket = io();
+      iceServers = [
+        {
+          urls: "stun:stun.l.google.com:19302",
+        },
+      ];
+      // }
+      this.iceServers = { iceServers };
 
-    this.socket.on("connect", () => {
-      console.log("Conectado ao servidor!");
-    });
+      this.socket.on("connect", () => {
+        console.log("Conectado ao servidor!");
+      });
 
-    this.scene.add("cenaDeAmostra", cenaDeAmostra);
-    this.scene.add("abertura", abertura);
-    this.scene.start("cenaDeAmostra");
+      this.scene.add("cenaDeAmostra", cenaDeAmostra);
+      this.scene.add("abertura", abertura);
+      this.scene.start("cenaDeAmostra");
+    }
   }
-}
 
 window.onload = () => {
-  window.game = new Game();
-};
+    window.game = new Game();
+  };
