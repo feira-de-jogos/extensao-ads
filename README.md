@@ -28,21 +28,21 @@ Descrição sobre as referências que influenciaram no design do jogo.
 
 1. Clone o repositório
 
-```
-git clone https://github.com/link/para/o/repositório
-```
+  ```bash
+  git clone https://github.com/link/para/o/repositório
+  ```
 
 2. Instalação
 
-```
-npm install
-```
+  ```bash
+  npm install
+  ```
 
 2. Executando
 
-```
-npm start
-```
+  ```bash
+  npm start
+  ```
 
 3. O jogo irá rodar na [porta 3000](http://localhost:3000/) no seu navegador.
 
