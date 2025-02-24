@@ -1,6 +1,6 @@
-export default class cenaDeAmostra extends Phaser.Scene {
+export default class cena1 extends Phaser.Scene {
   constructor() {
-    super("cenaDeAmostra");
+    super("cena1");
     this.platforms;
     this.score = 0;
     this.scoreText;
@@ -56,7 +56,7 @@ export default class cenaDeAmostra extends Phaser.Scene {
 
     this.physics.add.collider(this.player, this.platforms);
 
-    stars = this.physics.add.group({
+    const stars = this.physics.add.group({
       key: "star",
       repeat: 11,
       setXY: { x: 12, y: 0, stepX: 70 },
@@ -98,7 +98,7 @@ export default class cenaDeAmostra extends Phaser.Scene {
       fill: "#000",
     });
 
-    bombs = this.physics.add.group();
+    const bombs = this.physics.add.group();
 
     this.physics.add.collider(bombs, this.platforms);
 
@@ -106,14 +106,7 @@ export default class cenaDeAmostra extends Phaser.Scene {
 
     function hitBomb(player, bomb) {
       this.scene.stop();
-      this.scene.start("cenaAbertura");
-      //   this.physics.pause();
-
-      //   player.setTint(0xff0000);
-
-      //   player.anims.play("turn");
-
-      //   gameOver = true;
+      this.scene.start("cena2");
     }
   }
 

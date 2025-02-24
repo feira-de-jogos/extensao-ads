@@ -1,6 +1,6 @@
-export default class abertura extends Phaser.Scene {
+export default class cena2 extends Phaser.Scene {
   constructor() {
-    super("abertura");
+    super("cena2");
   }
 
   preload() {
@@ -9,9 +9,8 @@ export default class abertura extends Phaser.Scene {
 
   create() {
     this.add.image(400, 300, "sky");
+    this.add.text(400, 300, "você está na cena 2!");
   }
 
   update() {}
 }
-
-// Exclua esse Arquivo depois
